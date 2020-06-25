@@ -1,3 +1,14 @@
+import datetime as time
+now = time.datetime.now()
+hour = now.hour
+if hour < 12:
+    print("Good morning")
+elif hour > 12 and hour < 17:
+    print("Good afternoon")
+elif hour > 17 and hour < 19:
+    print("Good evening")
+else:
+    print('Good night.')
 asking = input("Are you regestered. Yes(y) or No(n):  ")
 if asking == "y":
     complete = False
@@ -53,14 +64,11 @@ if asking == "y":
                 awsome()
 else:
     print("We are going to make you get regestered")
-  
-
-    elif asking1 == "No":
-        print("Hello. We are going to get you regestered")
-        username = input("Please enter your username:  ")
-        password = input("Please enter your password:  ")
-        c = user[username] = password
-        d = user.update(c)
+    print("Hello. We are going to get you regestered")
+    username = input("Please enter your username:  ")
+    password = input("Please enter your password:  ")
+    c = user[username] = password
+    d = user.update(c)
    
       
 
