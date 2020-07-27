@@ -9,10 +9,13 @@ elif hour > 17 and hour < 19:
     print("Good evening")
 else:
     print('Good night.')
-asking = input("Are you regestered. Yes(y) or No(n):  ")
-if asking == "y":
+def askings():
+    global asking
+    asking = input("Are you regestered. Yes(y) or No(n):  ")
+askings()
+if asking == "y" or asking == "Y":
     complete = False
-    user = {"username1" : "12345", "username2" : "67890" }
+    user = {"Nesh" : "12", "Dad" : "5" }
     while not complete:
         username = input("Username: ")
         password = input("Password: ")
@@ -29,7 +32,10 @@ if asking == "y":
             print(f"Thank you for logging on. ")
             complete = True
             print("Welcome.")
-            a = input("Enter yourname to check if you are verified:   ")
+            def input_a():
+                global a
+                a = input("Enter yourname to check if you are verified:   ")
+            input_a()
             if a == "Nesh" or a == "Malli":
                 print("Welcome back")
                 def awsome():
@@ -62,14 +68,23 @@ if asking == "y":
 
                     inputs()
                 awsome()
-else:
+#            elif a == int():
+#                print("No numbers are allowed")
+#                input_a()
+#            elif a == float():
+#                print("Decimals are not allowed")
+#                input_a()
+    
+            else:
+                print("Go to the school office")
+elif asking == "n" or asking == "N":
     print("We are going to make you get regestered")
     print("Hello. We are going to get you regestered")
     username = input("Please enter your username:  ")
     password = input("Please enter your password:  ")
     c = user[username] = password
     d = user.update(c)
-   
-      
-
-
+else:
+    print("Please input Yes(y) or No(n)")
+    askings()
+    
